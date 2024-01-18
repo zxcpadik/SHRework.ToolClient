@@ -4,6 +4,7 @@ namespace SHRework.ToolClient;
 public partial class MainForm : Form {
 
     SHProto proto = new SHProto("localhost");
+    public ConfigManager ConfigManager = new ConfigManager();
 
     public MainForm() {
         InitializeComponent();

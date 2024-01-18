@@ -1,9 +1,15 @@
 namespace SHRework.ToolClient;
 
 static class Program {
+
+    static MainForm Form;
+
     [STAThread]
     static void Main() {
         ApplicationConfiguration.Initialize();
-        Application.Run(new MainForm());
+
+        Form = new MainForm();
+        Form.ConfigManager.LoadConfig();
+        Application.Run(Form);
     }    
 }
